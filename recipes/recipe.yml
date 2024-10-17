@@ -69,6 +69,7 @@ modules:
       - google-noto-sans-javanese-fonts
       - google-noto-sans-sundanese-fonts
       # Removes IBus in favor of Fcitx5
+      - ibus-anthy-python
       - ibus-anthy
       # - ibus-chewing # Uncomment when F41
       - ibus-libzhuyin # Remove when F41
@@ -78,6 +79,7 @@ modules:
       - ibus-typing-booster
       - ibus-gtk4
       - ibus-panel
+      - ibus-setup
       - ibus
 
   - type: default-flatpaks
