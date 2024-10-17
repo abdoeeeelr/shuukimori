@@ -76,7 +76,6 @@ modules:
       - ibus-hangul
       - ibus-m17n
       - ibus-typing-booster
-      - ibus-xinit
       - ibus-gtk4
       - ibus-panel
       - ibus
