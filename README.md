@@ -4,8 +4,8 @@
 
 # Shuukimori &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-秋季森 / 秋期森 (_shuukimori_) [^1]
-:  autumn forest. "秋季/秋期" (_shuuki_, autumn) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree.
+> 秋季森 / 秋期森 (_shuukimori_) [^1]
+> autumn forest. "秋季/秋期" (_shuuki_, autumn) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree.
 [^1]: Please correct me if the spelling is wrong 😭 I'm not a proper Japanese speaker, just fascinated with it.
 
 This image is built from [Universal Blue image](https://universal-blue.org), which by itself is a [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) derivatives. This image aims to improve Fedora Kinoite for more consistent KDE experience.
