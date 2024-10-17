@@ -4,7 +4,7 @@
 
 # Shuukimori &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-> 秋季森 / 秋期森 (_shuukimori_) [^1]
+> 秋季森 / 秋期森 (_shuukimori_) [^1] : 
 > autumn forest. "秋季/秋期" (_shuuki_, autumn) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree.
 [^1]: Please correct me if the spelling is wrong 😭 I'm not a proper Japanese speaker, just fascinated with it.
 
