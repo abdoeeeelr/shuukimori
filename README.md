@@ -1,8 +1,21 @@
-# BlueBuild Template &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
+# **⚠️ THIS IMAGE IS STILL WIP!!! ⚠️**
+# You have been warned!
+---
 
-See the [BlueBuild docs](https://blue-build.org/how-to/setup/) for quick setup instructions for setting up your own repository based on this template.
+# Shuukimori &nbsp; [![bluebuild build badge](https://github.com/blue-build/template/actions/workflows/build.yml/badge.svg)](https://github.com/blue-build/template/actions/workflows/build.yml)
 
-After setup, it is recommended you update this README to describe your custom image.
+秋季森 / 秋期森 (_shuukimori_) [^1]
+:  autumn forest. "秋季/秋期" (_shuuki_, autumn) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree.
+[^1]: Please correct me if the spelling is wrong 😭 I'm not a proper Japanese speaker, just fascinated with it.
+
+This image is built from [Universal Blue image](https://universal-blue.org), which by itself is a [Fedora Atomic](https://fedoraproject.org/atomic-desktops/) derivatives. This image aims to improve Fedora Kinoite for more consistent KDE experience.
+
+List of changes made:
+- Replaced IBus with Fcitx5, for better integrations with KDE ecosystem
+- Added several Noto Sans fonts, not all, just the one with variable font support.
+- Added [Starship](https://starship.rs) (for terminal prompt ricing) and [fastfetch](https://github.com/fastfetch-cli/fastfetch) (obligatory).
+- Added fix for mouse cursors being Adwaita (the fallback one) in some apps (i.e. [Minecraft as a Flatpak](https://www.reddit.com/r/kde/comments/13ddktm/mouse_cursor_changing_when_over_some_apps_when/)), now it defaults to Breeze Dark.
+- and many to come, I guess.
 
 ## Installation
 
@@ -13,7 +26,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  rpm-ostree rebase ostree-unverified-registry:ghcr.io/blue-build/template:latest
+  rpm-ostree rebase ostree-unverified-registry:ghcr.io/abdoeeeelr/shuukimori:latest
   ```
 - Reboot to complete the rebase:
   ```
@@ -21,14 +34,12 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 - Then rebase to the signed image, like so:
   ```
-  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/blue-build/template:latest
+  rpm-ostree rebase ostree-image-signed:docker://ghcr.io/abdoeeeelr/shuukimori:latest
   ```
 - Reboot again to complete the installation
   ```
   systemctl reboot
   ```
-
-The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
 
 ## ISO
 
