@@ -84,7 +84,6 @@ modules:
       - ibus-panel
       - ibus-setup
       - ibus
-      - ibus-libs
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
