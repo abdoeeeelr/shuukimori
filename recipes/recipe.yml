@@ -3,7 +3,7 @@ description: A custom image based on uBlue's Kinoite image or something idk
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 40 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 modules:
@@ -63,6 +63,7 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
+      - openssh-askpass
       # Removes non-VF variants of...
       - google-noto-sans-balinese-fonts
       - google-noto-sans-cjk-fonts
@@ -78,9 +79,12 @@ modules:
       - ibus-m17n
       - ibus-typing-booster
       - ibus-gtk4
+      - ibus-gtk3
+      - ibus-gtk2
       - ibus-panel
       - ibus-setup
       - ibus
+      - ibus-libs
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
