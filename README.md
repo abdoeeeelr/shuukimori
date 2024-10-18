@@ -11,9 +11,11 @@ This image aims to improve Fedora Kinoite for more consistent KDE experience. Al
   - Also replaced Anthy with better-maintained Mozc
 - Added all Noto Sans Variable fonts.
 - Added [Starship](https://starship.rs) (for terminal prompt ricing) and [fastfetch](https://github.com/fastfetch-cli/fastfetch) (obligatory).
-- Added fix for mouse cursors being Adwaita (the fallback one) in some apps (i.e. [Minecraft as a Flatpak](https://www.reddit.com/r/kde/comments/13ddktm/mouse_cursor_changing_when_over_some_apps_when/)), now it defaults to Breeze Dark.
+- Added fix for mouse cursors being Adwaita (the fallback one) in some apps (i.e. [Minecraft as a Flatpak](https://www.reddit.com/r/kde/comments/13ddktm/mouse_cursor_changing_when_over_some_apps_when/)), now it defaults to Breeze Dark. [^2]
 - Replaced `gnome-ssh-askpass` with `ksshaskpass`
 - and many to come, I guess...?
+
+[^2]: The only caveat is the cursor size become smaller at that affected apps ~~(Cursors in Wayland is hell)~~
 
 ## Installation
 
