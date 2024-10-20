@@ -1,9 +1,9 @@
-name: shuukimori
-description: A custom image based on uBlue's Kinoite image or something idk
+name: shuukimori-testing
+description: A testing image for Shuukimori
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: 41 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 modules:
@@ -18,19 +18,17 @@ modules:
     install:
       - fastfetch # obligatory ofc
       - starship
-      # Reverts to variable variants for CJK and Traditional Indonesian Noto Sans fonts
-      - google-noto-sans-balinese-vf-fonts
-      - google-noto-sans-cjk-vf-fonts
-      - google-noto-sans-javanese-vf-fonts
-      - google-noto-sans-sundanese-vf-fonts
-      # Adds more Noto Sans VF fonts
+      # Reverts to variable variants for Noto Sans fonts that changed in uBlue upstream, then adds more
       - google-noto-sans-adlam-vf-fonts
       - google-noto-sans-armenian-vf-fonts
+      - google-noto-sans-balinese-vf-fonts
       - google-noto-sans-bamum-vf-fonts
       - google-noto-sans-bassa-vah-vf-fonts
+      - google-noto-sans-cjk-vf-fonts
       - google-noto-sans-cham-vf-fonts
       - google-noto-sans-gunjala-gondi-vf-fonts
       - google-noto-sans-hanifi-rohingya-vf-fonts
+      - google-noto-sans-javanese-vf-fonts
       - google-noto-sans-kawi-vf-fonts
       - google-noto-sans-kayah-li-vf-fonts
       - google-noto-sans-lisu-vf-fonts
@@ -44,6 +42,7 @@ modules:
       - google-noto-sans-ol-chiki-vf-fonts
       - google-noto-sans-oriya-vf-fonts
       - google-noto-sans-sora-sompeng-vf-fonts
+      - google-noto-sans-sundanese-vf-fonts
       - google-noto-sans-tai-tham-vf-fonts
       - google-noto-sans-syriac-vf-fonts
       - google-noto-sans-tangsa-vf-fonts
@@ -72,9 +71,7 @@ modules:
       # Removes IBus in favor of Fcitx5
       - ibus-anthy-python
       - ibus-anthy
-      # - ibus-chewing # Uncomment when F41
-      - ibus-libzhuyin # Remove when F41
-      - ibus-libpinyin # Remove when F41
+      - ibus-chewing
       - ibus-hangul
       - ibus-m17n
       - ibus-typing-booster
@@ -88,10 +85,9 @@ modules:
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
-      # If no repo information is specified, Flathub will be used by default
       # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      # repo-title: "Flathub" # Optional
       install:
         - org.atheme.audacious
         - org.kde.haruna
