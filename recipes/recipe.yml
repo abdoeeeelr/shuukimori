@@ -1,7 +1,5 @@
 name: shuukimori
 description: Custom Kinoite build aimed to add several QoLs (and non-QoLs too!)
-alt-tags:
-  - testing
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
