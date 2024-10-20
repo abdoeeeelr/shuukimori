@@ -1,5 +1,6 @@
-name: shuukimori-testing
-description: A testing image for Shuukimori
+name: shuukimori
+description: Custom Kinoite build aimed to add several QoLs (and non-QoLs too!)
+alt-tags: testing
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-main
@@ -69,18 +70,20 @@ modules:
       - google-noto-sans-javanese-fonts
       - google-noto-sans-sundanese-fonts
       # Removes IBus in favor of Fcitx5
+      - ibus
       - ibus-anthy-python
       - ibus-anthy
       - ibus-chewing
+      - ibus-libpinyin
       - ibus-hangul
       - ibus-m17n
-      - ibus-typing-booster
-      - ibus-gtk4
-      - ibus-gtk3
       - ibus-gtk2
+      - ibus-gtk3
+      - ibus-gtk4
+      - ibus-typing-booster
       - ibus-panel
       - ibus-setup
-      - ibus
+      - ibus-xinit
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
