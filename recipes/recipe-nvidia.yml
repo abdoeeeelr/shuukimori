@@ -1,0 +1,106 @@
+name: shuukimori
+description: Custom Kinoite build aimed to add several QoLs (and non-QoLs too!)
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/kinoite-nvidia
+image-version: 41 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    install:
+      - fastfetch # obligatory ofc
+      - starship
+      # Reverts to variable variants for Noto Sans fonts that changed in uBlue upstream, then adds more
+      - google-noto-sans-adlam-vf-fonts
+      - google-noto-sans-armenian-vf-fonts
+      - google-noto-sans-balinese-vf-fonts
+      - google-noto-sans-bamum-vf-fonts
+      - google-noto-sans-bassa-vah-vf-fonts
+      - google-noto-sans-cjk-vf-fonts
+      - google-noto-sans-cham-vf-fonts
+      - google-noto-sans-gunjala-gondi-vf-fonts
+      - google-noto-sans-hanifi-rohingya-vf-fonts
+      - google-noto-sans-javanese-vf-fonts
+      - google-noto-sans-kawi-vf-fonts
+      - google-noto-sans-kayah-li-vf-fonts
+      - google-noto-sans-lisu-vf-fonts
+      - google-noto-sans-malayalam-vf-fonts
+      - google-noto-sans-medefaidrin-vf-fonts
+      - google-noto-sans-meeteimayek-vf-fonts
+      - google-noto-sans-myanmar-vf-fonts
+      - google-noto-sans-nag-mundari-vf-fonts
+      - google-noto-sans-new-tai-lue-vf-fonts
+      - google-noto-sans-nko-unjoined-vf-fonts
+      - google-noto-sans-ol-chiki-vf-fonts
+      - google-noto-sans-oriya-vf-fonts
+      - google-noto-sans-sora-sompeng-vf-fonts
+      - google-noto-sans-sundanese-vf-fonts
+      - google-noto-sans-tai-tham-vf-fonts
+      - google-noto-sans-syriac-vf-fonts
+      - google-noto-sans-tangsa-vf-fonts
+      - google-noto-sans-vithkuqi-vf-fonts
+      # Additional fonts I like
+      - rsms-inter-vf-fonts
+      # Install Fcitx5 and its plugins
+      - fcitx5
+      - fcitx5-chinese-addons
+      - fcitx5-chewing
+      - fcitx5-hangul
+      - fcitx5-libthai
+      - fcitx5-m17n
+      - fcitx5-mozc
+      - fcitx5-unikey
+      - mozc
+    remove:
+      - firefox
+      - firefox-langpacks
+      - openssh-askpass
+      # Removes non-VF variants of...
+      - google-noto-sans-balinese-fonts
+      - google-noto-sans-cjk-fonts
+      - google-noto-sans-javanese-fonts
+      - google-noto-sans-sundanese-fonts
+      # Removes IBus in favor of Fcitx5
+      - ibus
+      - ibus-anthy-python
+      - ibus-anthy
+      - ibus-chewing
+      - ibus-libpinyin
+      - ibus-hangul
+      - ibus-m17n
+      - ibus-gtk2
+      - ibus-gtk3
+      - ibus-gtk4
+      - ibus-typing-booster
+      - ibus-panel
+      - ibus-setup
+      - ibus-xinit
+
+  - type: default-flatpaks
+    notify: true # Send notification after install/uninstall is finished (true/false)
+    system:
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub" # Optional
+      install:
+        - org.atheme.audacious
+        - org.kde.haruna
+        - org.kde.gwenview
+        - org.kde.kcalc
+        - org.kde.kget
+        - org.kde.okular
+        - org.mozilla.firefox
+        - org.onlyoffice.desktopeditors
+      remove:
+      # - org.gnome.eog
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+
