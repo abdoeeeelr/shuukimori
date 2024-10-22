@@ -1,4 +1,4 @@
-name: shuukimori
+name: shuukimori-nvidia
 description: Custom Kinoite build aimed to add several QoLs (and non-QoLs too!)
 
 # the base image to build on top of (FROM) and the version tag to use
