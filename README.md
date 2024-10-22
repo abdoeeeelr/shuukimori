@@ -1,7 +1,7 @@
 # Shuukimori 🍂 &nbsp; [![bluebuild build badge](https://github.com/abdoeeeelr/shuukimori/actions/workflows/build.yml/badge.svg)](https://github.com/abdoeeeelr/shuukimori/actions/workflows/build.yml)
 
 > 秋季森 / 秋期森 (_shuukimori_) : 
-> autumn forest. "秋季/秋期" (_shuuki_, autumn) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree being... well, 'tree'. [^1]
+> autumn forest. "秋季/秋期" (_shuuki_, autumn) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree being... well, 'forest of trees'. [^1]
 [^1]: I use "秋季/秋期" instead of "秋" because it's sounds prettier (also, Japanese speaker pls correct me if I'm wrong)
 
 This image aims to improve Fedora Kinoite for more consistent KDE experience. Although I might add more non-improvement stuff here, as time goes on.
@@ -40,6 +40,9 @@ To rebase an existing atomic Fedora installation to the latest build (rebasing f
   ```
   systemctl reboot
   ```
+
+  Add `-nvidia` after `shuukimori` if you're using Nvidia GPU.
+
 ## ISO
 
 If build on Fedora Atomic, you can generate an offline ISO with the instructions available [here](https://blue-build.org/learn/universal-blue/#fresh-install-from-an-iso). These ISOs cannot unfortunately be distributed on GitHub for free due to large sizes, so for public projects something else has to be used for hosting.
