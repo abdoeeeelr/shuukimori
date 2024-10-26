@@ -8,5 +8,4 @@ modules:
     - from-file: commons/files.yml
     - from-file: commons/rpm-ostree.yml
     - from-file: commons/default-flatpaks.yml
-
-- type: signing
+    - type: signing
