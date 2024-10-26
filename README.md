@@ -54,3 +54,7 @@ These images are signed with [Sigstore](https://www.sigstore.dev/)'s [cosign](ht
 ```bash
 cosign verify --key cosign.pub ghcr.io/abdoeeeelr/shuukimori
 ```
+
+## Credits
+- [Maple Leaves on Shrine wallpaper](https://unsplash.com/photos/red-leaves-on-gray-concrete-fence-w2CWOAij-q0)
+- [Kurama Line in Autumn wallpaper](https://unsplash.com/photos/blue-train-in-the-middle-of-the-forest-0q9YhC5oZbY)

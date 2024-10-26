@@ -1,0 +1,12 @@
+type: default-flatpaks
+notify: true
+system:
+    install:
+        - org.atheme.audacious
+        - org.kde.haruna
+        - org.kde.gwenview
+        - org.kde.kcalc
+        - org.kde.kget
+        - org.kde.okular
+        - org.mozilla.firefox
+        - org.onlyoffice.desktopeditors
