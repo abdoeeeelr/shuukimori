@@ -1,6 +1,6 @@
 type: files
-    files:
-        - source: system
-          destination: /
-        - source: wallpapers
-          destination: /usr/share/wallpapers
+files:
+    - source: system
+      destination: /
+    - source: wallpapers
+      destination: /usr/share/wallpapers
