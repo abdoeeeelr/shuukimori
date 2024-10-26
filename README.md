@@ -4,7 +4,7 @@
 > autumn forest. "秋季/秋期" (_shuuki_, autumn season/period) is because this project started in October, while "森" (_mori_, forest) is a reference to rpm-ostree being... well, 'forest of trees'. [^1]
 [^1]: I use "秋季/秋期" instead of "秋" because it's sounds prettier (also, Japanese speaker pls correct me if I'm wrong)
 
-This image aims to improve Fedora Kinoite for more consistent KDE experience. Although I might add more non-improvement stuff here, as time goes on.
+This image aims to improve Fedora Kinoite for more consistent KDE experience, although I might add more non-improvement stuff here, as time goes on.
 
 ### List of changes made:
 - Replaced IBus with Fcitx5, for better integrations with KDE/Qt ecosystem.
