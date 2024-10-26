@@ -7,10 +7,11 @@
 This image aims to improve Fedora Kinoite for more consistent KDE experience. Although I might add more non-improvement stuff here, as time goes on.
 
 ### List of changes made:
-- Replaced IBus with Fcitx5, for better integrations with KDE ecosystem.
+- Replaced IBus with Fcitx5, for better integrations with KDE/Qt ecosystem.
   - Also replaced Anthy with better-maintained Mozc
 - Added all Noto Sans Variable fonts.
-- Added [Starship](https://starship.rs) (for terminal prompt ricing) and [fastfetch](https://github.com/fastfetch-cli/fastfetch) (obligatory).
+- Added [Starship](https://starship.rs) (for terminal prompt ricing) and [fastfetch](https://github.com/fastfetch-cli/fastfetch) (obligatory). 🚀
+- Added [fish shell](https://fishshell.com) <><3
 - Added fix for mouse cursors being Adwaita (the fallback one) in some apps (i.e. [Minecraft as a Flatpak](https://www.reddit.com/r/kde/comments/13ddktm/mouse_cursor_changing_when_over_some_apps_when/)), now it defaults to Breeze Dark. [^2]
 - Replaced `gnome-ssh-askpass` with `ksshaskpass`
 - and many to come, I guess...?
